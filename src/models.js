@@ -1,6 +1,5 @@
-const regex = require('./regex');
-
-module.exports = [
+import regex from './regex';
+export default [
 	{
 		name: 'hex',
 		pattern: regex.hex,
@@ -23,8 +22,10 @@ module.exports = [
 		pattern: regex[mode],
 		transform: (p1, p2, p3, alpha = '1') =>
 			Object.fromEntries(
-				[p1, p2, p3, alpha]
-					.map((value, index) => [`${mode}a`[index], parseFloat(value)])
+				[p1, p2, p3, alpha].map((value, index) => [
+					`${mode}a`[index],
+					parseFloat(value),
+				])
 			),
 	})),
 ];

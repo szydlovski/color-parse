@@ -38,7 +38,7 @@ const invalid = [
 	'hsx(360,50,50)',
 ];
 
-module.exports = [
+export default [
 	...hex.flatMap(([hexString, [r, g, b, a]]) =>
 		['', '#'].map((prefix) => ({
 			input: prefix + hexString,
