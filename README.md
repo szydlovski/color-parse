@@ -8,10 +8,14 @@ Parse CSS color strings, with added support for other color models not included 
 npm install @colorsuite/color-parse
 ```
 ```javascript
-const { parseColor } = require('./@colorsuite/color-parse');
+import { parseColor } from '@szydlovski/color-parse';
 
 parseColor('#fabfab') // { model: 'hex', color: { r: 250, g: 191, b: 171, a: 1 } }
 parseColor('#fabfab') // { model: 'hex', color: { r: 250, g: 191, b: 171, a: 1 } }
+
+// also available as umd
+
+const { parseColor } = require('@szydlovski/color-parse/umd');
 ```
 
 # Specification and compatibility
