@@ -16,4 +16,4 @@ parseColor('#fabfab') // { model: 'hex', color: { r: 250, g: 191, b: 171, a: 1 }
 
 # Specification and compatibility
 
-CSS only officially supports hexes, `rbg` and `hsl`. This library will also identify `hsv`, `hsb` (an alias of `hsv`) and `hwb` colors
+CSS only officially supports hexes, `rbg` and `hsl`. This library will also identify `hsv`, `hsb` (an alias of `hsv`) and `hwb` colors.
