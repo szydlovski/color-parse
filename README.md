@@ -11,7 +11,6 @@ npm install @colorsuite/color-parse
 import { parseColor } from '@szydlovski/color-parse';
 
 parseColor('#fabfab') // { model: 'hex', color: { r: 250, g: 191, b: 171, a: 1 } }
-parseColor('#fabfab') // { model: 'hex', color: { r: 250, g: 191, b: 171, a: 1 } }
 
 // also available as umd
 
