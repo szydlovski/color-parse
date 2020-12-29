@@ -14,6 +14,7 @@
     "css color",
     "color string"
   ],
+  "repository": "https://github.com/szydlovski/color-parse",
   "author": "Kamil Szydlowski <kamil.szydlovski@gmail.com> (http://www.szydlovski.com)",
   "license": "MIT",
   "devDependencies": {
