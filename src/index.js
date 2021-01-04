@@ -1,5 +1,4 @@
-import colorModels from './models';
-
+import colorModels from './models.js';
 
 export function parseColor(color) {
 	if (typeof color !== 'string') {
@@ -11,10 +10,10 @@ export function parseColor(color) {
 	for (const model of colorModels) {
 		const match = color.match(model.pattern);
 		if (match !== null) {
-			return {
-				model: model.name,
-				color: model.transform(...match.slice(1, match.length)),
-			};
+			const { space } = model;
+			const color = model.transform(...match.slice(1, match.length));
+			return [color, space]
 		}
 	}
+	return [undefined, undefined];
 }

@@ -39,36 +39,25 @@ const invalid = [
 ];
 
 export default [
-	...hex.flatMap(([hexString, [r, g, b, a]]) =>
+	...hex.flatMap(([hexString, color]) =>
 		['', '#'].map((prefix) => ({
 			input: prefix + hexString,
-			value: {
-				model: 'hex',
-				color: { r, g, b, a },
-			}
+			value: [color, 'rgb']
 		}))
 	),
-	...rgb.flatMap(([parameters, [r, g, b, a]]) =>
+	...rgb.flatMap(([parameters, color]) =>
 		['rgb', 'rgba'].map((format) => ({
 			input: `${format}(${parameters})`,
-			value: {
-				model: 'rgb',
-				color: { r, g, b, a },
-			}
+			value: [color, 'rgb']
 		}))
 	),
-	...hue.flatMap(([parameters, values]) =>
+	...hue.flatMap(([parameters, color]) =>
 		['hsl', 'hsv', 'hsb', 'hwb'].flatMap((mode) =>
 			['', 'a'].map((alpha) => ({
 				input: `${mode + alpha}(${parameters})`,
-				value: {
-					model: mode,
-					color: Object.fromEntries(
-						[...(mode + 'a')].map((param, index) => [param, values[index]])
-					),
-				}
+				value: [color, mode]
 			}))
 		)
 	),
-	...invalid.map((invalidString) => ({ input: invalidString, value: {} })),
+	...invalid.map((invalidString) => ({ input: invalidString, value: [null, null] })),
 ];

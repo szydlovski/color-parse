@@ -1,10 +1,10 @@
 {
   "name": "@szydlovski/color-parse",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "parse css color strings",
-  "main": "src/color-parse.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "nyc mocha test/index.test.js --require esm",
+    "test": "nyc mocha test/index.test.js",
     "build": "rollup -c"
   },
   "keywords": [
@@ -14,14 +14,18 @@
     "css color",
     "color string"
   ],
+  "type": "module",
   "repository": "https://github.com/szydlovski/color-parse",
   "author": "Kamil Szydlowski <kamil.szydlovski@gmail.com> (http://www.szydlovski.com)",
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.2.0",
-    "esm": "^3.2.25",
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
     "rollup": "^2.35.1"
+  },
+  "exports": {
+    ".": "./dist/bundle.js",
+    "./cjs": "./dist/bundle.cjs"
   }
 }

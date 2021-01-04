@@ -2,13 +2,13 @@ export default {
   input: 'src/index.js',
   output: [
     {
-      file: 'esm/bundle.js',
+      file: 'dist/bundle.js',
       format: 'esm'
     },
     {
-      name: 'color-parse',
-      file: 'umd/bundle.js',
-      format: 'umd'
+      name: 'color-convert',
+      file: 'dist/bundle.cjs',
+      format: 'cjs'
     }
   ]
 };
