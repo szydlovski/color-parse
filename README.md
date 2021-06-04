@@ -5,7 +5,7 @@ Parse CSS color strings, with added support for other color models not included 
 # Usage
 
 ```
-npm install @colorsuite/color-parse
+npm install @szydlovski/color-parse
 ```
 ```javascript
 import { parseColor } from '@szydlovski/color-parse';
